@@ -103,6 +103,39 @@
       width: 100%;
     }
 
+    /* LANGUAGE SWITCHER */
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .lang-switch a {
+      text-decoration: none;
+      color: var(--text-muted);
+      padding: 0.25rem 0.6rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+    }
+
+    .lang-switch a:hover {
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .lang-switch .active-lang {
+      color: var(--accent);
+      background: #ffffff;
+      border-color: rgba(37, 99, 235, 0.45);
+    }
+
+    .lang-switch span {
+      color: var(--text-muted);
+    }
+
     @media (max-width: 720px) {
       .top-nav {
         flex-direction: column;
@@ -118,6 +151,10 @@
 
       .nav-logo img {
         height: 40px; /* un po' più piccolo su mobile */
+      }
+
+      .lang-switch {
+        margin-top: 0.25rem;
       }
     }
 
@@ -308,6 +345,7 @@
           <img src="Logo_long.png" alt="StudyFind logo" />
         </a>
       </div>
+
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#for-students">For Students</a>
         <a href="#for-institutions">For Institutions</a>
@@ -315,6 +353,12 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <div class="lang-switch" aria-label="Language selector">
+        <a href="index.html" class="active-lang">EN</a>
+        <span>|</span>
+        <a href="index-dn.html">DN</a>
+      </div>
     </div>
 
     <header class="site-header" id="top">
