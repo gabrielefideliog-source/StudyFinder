@@ -226,17 +226,55 @@
 
     .partners-section {
       margin-top: 2.4rem;
-      text-align: center;
+    }
+
+    .partners-card {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1.5rem 1.7rem;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.98);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      display: flex;
+      align-items: stretch;
+      gap: 1.6rem;
+    }
+
+    .partners-image-wrapper {
+      flex: 0 0 260px;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .partners-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .partners-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.75rem;
+      text-align: left;
     }
 
     .partners-section-title {
-      margin: 0 0 0.6rem;
+      margin: 0;
       font-size: 1.35rem;
       font-weight: 600;
     }
 
     .partners-section-text {
-      margin: 0 auto 1.2rem;
+      margin: 0;
       max-width: 560px;
       font-size: 0.95rem;
       color: var(--text-muted);
@@ -269,6 +307,17 @@
     .primary-button:active {
       transform: translateY(0);
       box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .partners-card {
+        flex-direction: column;
+      }
+
+      .partners-image-wrapper {
+        flex: 0 0 auto;
+        height: 220px;
+      }
     }
 
     /* Services */
@@ -359,7 +408,7 @@
       backdrop-filter: blur(12px);
     }
 
-    /* Responsive */
+    /* Responsive tweaks */
 
     @media (min-width: 768px) {
       .hero-image {
@@ -398,6 +447,7 @@
         <a href="#for-students">For Students</a>
         <a href="#for-institutions">For Institutions</a>
         <a href="#services">Services</a>
+        <a href="partners.html">Partners</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -422,16 +472,24 @@
     </header>
 
     <main>
-      <!-- NEW PARTNER UNIVERSITIES SECTION -->
+      <!-- PARTNER UNIVERSITIES SECTION IN A BOX -->
       <section class="partners-section" id="partners">
-        <h2 class="partners-section-title">Partner Universities</h2>
-        <p class="partners-section-text">
-          Explore the universities that collaborate with StudyFind across Denmark. See where our students apply,
-          study, and build their future careers.
-        </p>
-        <a href="partners.html" class="primary-button">
-          Discover all partner universities
-        </a>
+        <div class="partners-card">
+          <div class="partners-image-wrapper">
+            <!-- Use a vertical image here, e.g. 3:4 ratio -->
+            <img src="partners-vertical.jpg" alt="Students at a Danish university campus" class="partners-image" />
+          </div>
+          <div class="partners-content">
+            <h2 class="partners-section-title">Partner Universities</h2>
+            <p class="partners-section-text">
+              Explore the universities that collaborate with StudyFind across Denmark. See where our students apply,
+              study, and build their future careers.
+            </p>
+            <a href="partners.html" class="primary-button">
+              Discover all partner universities
+            </a>
+          </div>
+        </div>
       </section>
 
       <!-- EXISTING SERVICES SECTION -->
