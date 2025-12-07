@@ -66,7 +66,7 @@
     }
 
     .nav-logo img {
-      height: 60px; /* COME RICHIESTO */
+      height: 60px;
       display: block;
     }
 
@@ -150,7 +150,7 @@
       }
 
       .nav-logo img {
-        height: 40px; /* un po' più piccolo su mobile */
+        height: 40px;
       }
 
       .lang-switch {
@@ -220,6 +220,55 @@
       flex-direction: column;
       padding: 0 5vw 3.5rem;
       gap: 3.5rem;
+    }
+
+    /* PARTNER UNIVERSITIES SECTION ON HOME */
+
+    .partners-section {
+      margin-top: 2.4rem;
+      text-align: center;
+    }
+
+    .partners-section-title {
+      margin: 0 0 0.6rem;
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+
+    .partners-section-text {
+      margin: 0 auto 1.2rem;
+      max-width: 560px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .primary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.4rem;
+      border-radius: var(--radius-pill);
+      border: none;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.25);
+      cursor: pointer;
+      transition: transform 0.08s ease-out, box-shadow 0.1s ease-out, background 0.1s ease-out;
+    }
+
+    .primary-button:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 34px rgba(37, 99, 235, 0.35);
+    }
+
+    .primary-button:active {
+      transform: translateY(0);
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
     }
 
     /* Services */
@@ -340,7 +389,6 @@
     <!-- TOP NAVBAR -->
     <div class="top-nav">
       <div class="nav-left">
-        <!-- Assicurati che Logo_long.png sia nella stessa cartella di index.html -->
         <a href="#top" class="nav-logo">
           <img src="Logo_long.png" alt="StudyFind logo" />
         </a>
@@ -357,13 +405,12 @@
       <div class="lang-switch" aria-label="Language selector">
         <a href="index.html" class="active-lang">EN</a>
         <span>|</span>
-        <a href="index-dn.html">DK</a>
+        <a href="index-dn.html">DN</a>
       </div>
     </div>
 
     <header class="site-header" id="top">
       <div class="hero-image-wrapper">
-        <!-- immagine di copertina -->
         <img src="prima.jpg" alt="Students exploring bachelor programs in Denmark" class="hero-image" />
       </div>
       <div class="hero-logo-block">
@@ -375,6 +422,19 @@
     </header>
 
     <main>
+      <!-- NEW PARTNER UNIVERSITIES SECTION -->
+      <section class="partners-section" id="partners">
+        <h2 class="partners-section-title">Partner Universities</h2>
+        <p class="partners-section-text">
+          Explore the universities that collaborate with StudyFind across Denmark. See where our students apply,
+          study, and build their future careers.
+        </p>
+        <a href="partners.html" class="primary-button">
+          Discover all partner universities
+        </a>
+      </section>
+
+      <!-- EXISTING SERVICES SECTION -->
       <section class="services-section" aria-labelledby="services-title" id="services">
         <h2 id="services-title">Our Services</h2>
         <p class="services-intro">
@@ -426,4 +486,3 @@
   <div class="elfsight-app-50980dca-edc4-46f8-ba73-5f2444f2033a" data-elfsight-app-lazy></div>
 </body>
 </html>
-
